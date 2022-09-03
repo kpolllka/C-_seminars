@@ -4,11 +4,15 @@
 // 2 -> " -2, -1, 0, 1, 2"
 
 Console.Write("Введите число: ");
-int number = Convert.ToInt32(Console.ReadLine());
-int count = -number;
+int number1 = Convert.ToInt32(Console.ReadLine());
+int number2 = -number1;
 
-while(count <= number)
+while(number2 <= number1)
 {
-    Console.Write(count + " ");
-    count = count + 1;
+    Console.Write(number2 + " ");
+    number2 = number2 + 1;
+}
+if(number1 < 0)
+{
+    Console.WriteLine("Введено не положительное цисло!");
 }
