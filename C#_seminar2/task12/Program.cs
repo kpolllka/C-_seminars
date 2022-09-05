@@ -9,9 +9,13 @@ int num1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите второе число: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
 
-if (num1 % num2 == 0)
+if (num2 != 0 && num1 % num2 == 0)
 {
         Console.WriteLine ("Кратно");
+}
+else if (num2 == 0)
+{
+    Console.WriteLine("На ноль делить нельзя!");
 }
 else
 {
