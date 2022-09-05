@@ -13,5 +13,9 @@ int digit1 = number / 100; // получим первую цифру числа 
 // Console.WriteLine(digit1);
 // Console.WriteLine(digit2);
 
-//Console.WriteLine($"{digit1}{digit3}");
+//Console.WriteLine($"{digit1}{digit3}"); - первый вариант вывода решения
+
+//int res = digit1 *10 + digit3; - второй вариант выводы решения
+//Console.WriteLine(res);
+
 System.Console.WriteLine("Новое число "+ digit1 + digit3);
