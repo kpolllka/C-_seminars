@@ -4,5 +4,17 @@
 // 46 -> нет
 // 161 -> да
 
-Console.Write("Введите число: ")
+Console.Write("Введите число: ");
+int N = Convert.ToInt32(Console.ReadLine());
 
+int N1 = 7;
+int N2 = 23;
+
+if (N % N1 == 0 && N % N2 == 0)
+{
+    Console.WriteLine($"Число {N} кратно числам {N1} и {N2}");
+}
+else
+{
+    Console.WriteLine($"Число {N} не кратно числам {N1} и {N2}");
+}
