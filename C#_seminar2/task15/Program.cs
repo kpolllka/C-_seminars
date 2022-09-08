@@ -6,37 +6,14 @@
 // 1 -> нет
 
 Console.Write("Введите номер дня недели: ");
-int number = Convert.ToInt32(Console.ReadLine());
+int day = Convert.ToInt32(Console.ReadLine());
 
-if (number == 1)
+if (0 <day && day < 6 )
 {
-     Console.Write("Понедельник - не выходной день");
+     Console.Write($"{day} день недели не выходной");
 }
-else if (number == 2)
+else if (6 <= day && day <=7)
 {
-     Console.Write("Вторник - не выходной день");
+     Console.Write($"{day} день недели выходной");
 }
-else if (number == 3)
-{
-     Console.Write("Среда - не выходной день");
-}
-else if (number == 4)
-{
-     Console.Write("Четверг - не выходной день");
-}
-else if (number == 5)
-{
-     Console.Write("Пятница - не выходной день");
-}
-else if (number == 6)
-{
-     Console.Write("Суббота - выходной день");
-}
-else if (number == 7)
-{
-     Console.Write("Воскресенье - выходной день");
-}
-else
-{
-    Console.Write("Нет такого дня недели");
-}
+else Console.WriteLine ($"{day} дня недели не существует");
