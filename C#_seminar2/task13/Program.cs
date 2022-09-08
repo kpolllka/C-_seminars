@@ -6,30 +6,20 @@
 // 32679 -> 6
 
 Console.Write("Введите число: ");
-int number = Convert.ToInt32(Console.ReadLine());
+double N = Convert.ToDouble(Console.ReadLine());
 
-if (100 <= number && number <= 999)
+if (-99 > N || N > 99)
 {
-    int result = number % 10;
-    Console.WriteLine(result);
-}
-
-while (1000 <= number && number <= -1000)
-{
-    number = number / 10;
     
-        
-        }
-        else if (-100 <= number && number <= -999)
-        {
-            int result2 = number % 10;
-            Console.WriteLine(result2);
-        }
+    while (-1 > N || N > 1)
+    {
+        N = N / 10;
+    }
+    double N2 = Math.Truncate(N * 1000 % 10);
+    Console.WriteLine(N2);
 }
-if (-100 < number && number < 100)
+
+else
 {
-    Console.WriteLine("Третьй цифры нет");
+    Console.WriteLine("Третьей цифры нет");
 }
-
-
-
