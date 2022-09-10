@@ -23,3 +23,20 @@ else
 {
     Console.WriteLine("Третьей цифры нет");
 }
+
+
+// Console.WriteLine("Введите число");
+// int NumberA = Convert.ToInt32(Console.ReadLine());
+// if(NumberA < 100)
+// {
+//     Console.WriteLine($"у числа {NumberA} нет третьей цифры");
+// }
+// else
+// while(NumberA > 999)
+// {
+//     NumberA = NumberA / 10;
+// }
+//  if(NumberA < 1000)
+// {
+//     Console.WriteLine(NumberA % 10);
+// }
