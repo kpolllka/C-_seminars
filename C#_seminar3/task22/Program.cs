@@ -5,14 +5,15 @@
 
 Console.Write("Введите положительное число больше 0: ");
 int N = Convert.ToInt32(Console.ReadLine());
-int count = 1;
 
-while (count <= N)
+if (N > 0)
 {
-    Console.Write(Math.Pow(count, 2) + " ");
-    count ++;
+    for (int i = 1; i <= N; i++)
+    {
+        Console.Write(Math.Pow(i, 2) + " ");
+    }
 }
-if (N < 1)
+else
 {
     Console.WriteLine("Введенное число не соответствует условию.");
 }
