@@ -9,7 +9,7 @@ int ReadNumber(string message)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-int GetCountOfDigit(int a)
+int ProdNumbersFromToA(int a)
 {
     if (a >= 1) // если а больше 0, то работает дальше
     {
@@ -29,5 +29,5 @@ int GetCountOfDigit(int a)
 }
 
 int number = ReadNumber("Введите число А: ");
-int summa = GetCountOfDigit(number);
+int summa = ProdNumbersFromToA(number);
 Console.WriteLine($"Произведение элементов от 1 до А = {summa}");
