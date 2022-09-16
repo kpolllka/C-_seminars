@@ -8,18 +8,17 @@ Console.Write("Введите число: ");
 int a = Convert.ToInt32(Console.ReadLine());
 
 if (Math.Abs(a) < 10)
-Console.WriteLine($"Сумма цифр в числе равна {Math.Abs(a)}");
+Console.WriteLine($"Сумма цифр во введенном числе = {Math.Abs(a)}");
 
 else
 {
-    int summ = 0;
-    int i = 0;
-    while (a > 9)
+    int sum = 0;
+    
+    for (int i = 0; Math.Abs(a) > 0; i++)
     {
-        a = a % 10;
-        summ = summ + a;
-        i++;
-        
+        sum = sum + a % 10;
+        a = a / 10;
     }
-    Console.WriteLine(sum);
+    Console.WriteLine($"Сумма цифр во введенном числе = {Math.Abs(sum)}");
 }
+
