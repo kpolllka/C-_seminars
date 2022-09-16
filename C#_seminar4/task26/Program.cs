@@ -3,6 +3,7 @@
 // 456 -> 3
 // 78 -> 2
 // 89126 -> 5
+// -216 -> 3
 
 int ReadNumber(string message)
 {
