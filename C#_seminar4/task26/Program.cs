@@ -4,22 +4,24 @@
 // 78 -> 2
 // 89126 -> 5
 
-Console.Write("Введите число: ");
-int N = Convert.ToInt32(Console.ReadLine());
-
-// if (-10 < N && N < 10)
-// {
-//     Console.WriteLine ($"Введенное число {N} состоит из 1 цифры");
-// }
-if (Math.Abs(N) > 9)
+int ReadNumber(string message)
 {
-    int i = 0;
-    while (i < Math.Abs(N) && Math.Abs(N) > 9)
-    {
-        N = N / 10;
-        i++;
-    }
-    Console.WriteLine ($"Введенное число состоит из {i+1} цифр");
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
 }
-else
-Console.WriteLine($"Введенное число состоит из 1 цифры");
+
+int GetCountOfDigit(int num)
+{
+    int count = 0; //число цифр (кол-во итераций цикла)
+    if (num == 0) count = 1;
+    while(num != 0)
+    {
+        num = num / 10;
+        count++;
+    }
+    return count;
+}
+
+int number = ReadNumber("Введите число: ");
+int count = GetCountOfDigit(number);
+Console.WriteLine($"Введенное число {number} состоит из {count} цифр");
