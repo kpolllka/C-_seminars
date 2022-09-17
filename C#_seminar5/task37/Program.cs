@@ -20,3 +20,4 @@ if(arr.Length%2 != 0)
 
 }
 Console.WriteLine(String.Join(", ", arrnew));
+
