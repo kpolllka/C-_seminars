@@ -15,37 +15,58 @@ int[] GetArray(int size, int leftRange, int rightRange)
     return arr;
 }
 
-int SumPositiveElements(int[] arr)
+// int SumPositiveElements(int[] arr)
+// {
+//     int sum = 0;
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         if(arr[i] > 0) // если элемент массива положительный
+//         {
+//             sum = sum + arr[i]; // копим сумму положительных эл массива
+//             //sum += arr[i]
+//         }
+//     }
+//     return sum;
+// }
+
+// int SumNegativeElements(int[] arr)
+// {
+//     int sum = 0;
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         if(arr[i] < 0) // если элемент массива отрицательный
+//         {
+//             sum = sum + arr[i]; // копим сумму отрицательных эл массива
+//             //sum += arr[i] //суммирование
+//             //-=, *=, /= //вычитание, умножение, деление
+//         }
+//     }
+//     return sum;
+// }
+
+(int, int) GetPositiveAndNegativeSums(int[] arr)
 {
-    int sum = 0;
+    int sumP = 0;
+    int sumN = 0;
+    
     for (int i = 0; i < arr.Length; i++)
     {
-        if(arr[i] > 0) // если элемент массива положительный
+        if (arr[i] > 0)
         {
-            sum = sum + arr[i]; // копим сумму положительных эл массива
-            //sum += arr[i]
+            sumP += arr[i];
+        }
+        else
+        {
+            sumN += arr[i];
         }
     }
-    return sum;
+    return (sumP, sumN);
 }
 
-int SumNegativeElements(int[] arr)
-{
-    int sum = 0;
-    for (int i = 0; i < arr.Length; i++)
-    {
-        if(arr[i] < 0) // если элемент массива отрицательный
-        {
-            sum = sum + arr[i]; // копим сумму отрицательных эл массива
-            //sum += arr[i] //суммирование
-            //-=, *=, /= //вычитание, умножение, деление
-        }
-    }
-    return sum;
-}
 
 int[] array = GetArray(12, -9, 9);
 Console.WriteLine(String.Join(", ", array));
-int sumPositive = SumPositiveElements(array);
-int sumNegative = SumNegativeElements(array);
+// int sumPositive = SumPositiveElements(array);
+// int sumNegative = SumNegativeElements(array);
+(int sumPositive, int  sumNegative) = GetPositiveAndNegativeSums(array); 
 Console.WriteLine($"Сумма положительных элементов = {sumPositive}, отрицательных = {sumNegative}");
