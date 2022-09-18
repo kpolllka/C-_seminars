@@ -22,10 +22,6 @@ int NumberOfEven(int[] arr)
         {
             sum++;
         }
-        else
-        {
-            Console.WriteLine("Четных чисел не найдено");
-        }
     }
     return sum;
 } 
@@ -33,4 +29,4 @@ int NumberOfEven(int[] arr)
 int[] array = GetArray(10, 100, 999);
 Console.WriteLine(String.Join(", ", array));
 int numberOfEven = NumberOfEven(array);
-Console.WriteLine(numberOfEven);
+Console.WriteLine($"Количество четных чисел = {numberOfEven}");
