@@ -22,6 +22,10 @@ int NumberOfEven(int[] arr)
         {
             sum++;
         }
+        else
+        {
+            Console.WriteLine("Четных чисел не найдено");
+        }
     }
     return sum;
 } 
