@@ -67,3 +67,7 @@ int[,] matr = GetMatrix(m, n);
 PrintMatrix(matr);
 Console.WriteLine();
 Console.WriteLine(SumMainDiagonal(matr));
+
+// или последнюю строчку можно заменить на 2 другие строчки
+// int res = SumMainDiagonal(matr);
+// Console.WriteLine($"Сумма диагональных элементов массива = {res}.");
