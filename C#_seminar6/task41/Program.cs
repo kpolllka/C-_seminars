@@ -8,7 +8,7 @@
 string Message (string message)
 {
 Console.Write(message);
-return Console.ReadLine();
+return Console.ReadLine()!;
 }
 
 string N = Message ("Введите чило, для прекращения ввода введите stop: ");
