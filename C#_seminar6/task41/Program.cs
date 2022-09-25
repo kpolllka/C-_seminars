@@ -46,7 +46,8 @@ while (true)
     }
     else
     {
-        int answerNumber = Convert.ToInt32(answer);
+        // int answerNumber = Convert.ToInt32(answer); - переменная не нужна, если делаем Парс
+        int.TryParse(answer, out int answerNumber);
         if (answerNumber > 0)
         {
             countOfPositive++;
