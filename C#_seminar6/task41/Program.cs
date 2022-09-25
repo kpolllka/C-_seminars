@@ -5,26 +5,52 @@
 // 0, 7, 8, -2, -2 -> 2
 // 1, -7, 567, 89, 223-> 3
 
-string Message (string message)
+// string Message (string message)
+// {
+// Console.Write(message);
+// return Console.ReadLine()!;
+// }
+
+// string N = Message ("Введите чило, для прекращения ввода введите stop: ");
+
+// int count = 0;
+// while (N != "stop")
+// {
+//     int i = Convert.ToInt32(N);
+//     if (i > 0)
+//     {
+//         count = count + 1;
+//         N = Message("Введите чило, для прекращения ввода введите stop: ");
+//     }
+//     else
+//     {
+//         N = Message("Введите чило, для прекращения ввода введите stop: ");
+//     }
+// }
+// Console.WriteLine($"Вы ввели {count} чисел больше 0");
+
+string ReadNumber(string message)
 {
-Console.Write(message);
-return Console.ReadLine()!;
+    Console.Write(message);
+    return Console.ReadLine()!;
 }
 
-string N = Message ("Введите чило, для прекращения ввода введите stop: ");
+int countOfPositive = 0;
 
-int count = 0;
-while (N != "stop")
+while (true)
 {
-    int i = Convert.ToInt32(N);
-    if (i > 0)
+    string answer = ReadNumber("Введите число: ");
+    if (answer == "stop")
     {
-        count = count + 1;
-        N = Message("Введите чило, для прекращения ввода введите stop: ");
+        break;
     }
     else
     {
-        N = Message("Введите чило, для прекращения ввода введите stop: ");
-    }
+        int answerNumber = Convert.ToInt32(answer);
+        if (answerNumber > 0)
+        {
+            countOfPositive++;
+        }
+    } 
 }
-Console.WriteLine($"Вы ввели {count} чисел больше 0");
+Console.WriteLine(countOfPositive);
