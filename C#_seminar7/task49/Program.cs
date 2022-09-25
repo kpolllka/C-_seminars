@@ -66,6 +66,6 @@ int n = ReadNumber("Введите количество столбцов: ");
 int[,] matr = GetMatrix(m, n);
 PrintMatrix(matr);
 Console.WriteLine(); // выводит первоначальный массив
-// ChangeMatrix(matr); можно не выводить, выводит только изменения значений массива
-// Console.WriteLine();
+ChangeMatrix(matr); // можно не выводить, выводит только изменения значений массива
+Console.WriteLine();
 PrintMatrix(matr); // выводит измененный массив
