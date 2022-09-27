@@ -45,8 +45,8 @@ void PrintMatrix(int[,] matrix)
 void FindElement(int[,] matrix)
 {
     int i = ReadNumber("Введите индекс значения по строке: ");
-    int j = ReadNumber("Введите индекс значения по строке: ");
-    if (i < matrix.GetLength(0) && j < matrix.GetLength(1))
+    int j = ReadNumber("Введите индекс значения по столбцу: ");
+    if (i > -1 && i < matrix.GetLength(0) && j > -1 && j < matrix.GetLength(1))
     {
         Console.Write($"{matrix[i,j]}");
     }
