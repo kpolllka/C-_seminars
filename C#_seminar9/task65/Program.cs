@@ -9,18 +9,42 @@ int ReadNumber(string message)
     return Convert.ToInt32(Console.ReadLine());
 }
 
+// void PrintMtoN(int m, int n)
+// {
+//     if(m > n || m <=0)
+//     {
+//         return;
+//     }
+//     else
+//     {
+//         PrintMtoN(m, n-1);
+//         Console.Write(n + " ");
+//     }
+// }
+
 void PrintMtoN(int m, int n)
 {
-    if(m > n || m <=0)
+    if(n < m)
     {
-        return;
+        if (m == n - 1)
+        {
+            return;
+        }
+        Console.Write(m + " ");
+        PrintMtoN(m - 1, n);
     }
-    else
+    else if(n > m)
     {
-        PrintMtoN(m, n-1);
+        if(n == m - 1)
+        {
+            return;
+        }
+        PrintMtoN(m, n - 1);
         Console.Write(n + " ");
     }
+    else if(n == m) Console.Write(n + " ");
 }
+
 
 int num1 = ReadNumber("Введите число M: ");
 int num2 = ReadNumber("Введите число N: ");
