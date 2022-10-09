@@ -10,19 +10,27 @@ int ReadNumber(string message)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-void PrintMtoN(int m, int n)
+int Sum(int m, int n)
 {
-    if(m > n || m <=0)
+    int sum = 0;
+    if (n == m && n >=1 && m >= 1)
     {
-        return;
+        return n;
+    }
+    else if (n > m && n >=1 && m >= 1)
+    {
+        sum = n + Sum(m, n - 1);
+        return sum;
     }
     else
     {
-        PrintMtoN(m, n-1);
-        Console.Write(n + " ");
+        return -1;
     }
 }
 
-int num1 = ReadNumber("Введите число M: ");
-int num2 = ReadNumber("Введите число N: ");
-PrintMtoN(num1, num2);
+int M = ReadNumber("Введите число M: ");
+int N = ReadNumber("Введите число N: ");
+
+if (N > M) Console.Write(Sum(M, N));
+if (N < M) Console.Write(Sum(N, M));
+if (N == M) Console.Write(Sum(N, M));
